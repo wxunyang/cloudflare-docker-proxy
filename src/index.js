@@ -6,8 +6,15 @@ addEventListener("fetch", (event) => {
 const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
-  "cloudflare-docker-proxy.yowang.workers.dev/": "https://registry-1.docker.io",
+  "docker.yowang.top": "https://registry-1.docker.io",
+  "quay.yowang.top": "https://quay.io",
+  "gcr.yowang.top": "https://gcr.io",
+  "k8s-gcr.yowang.top": "https://k8s.gcr.io",
+  "k8s.yowang.top": "https://registry.k8s.io",
+  "ghcr.yowang.top": "https://ghcr.io",
+  "cloudsmith.yowang.top": "https://docker.cloudsmith.io",
 };
+
 
 function routeByHosts(host) {
   if (host in routes) {
